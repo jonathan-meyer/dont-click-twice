@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/dont-click-twice/static/css/main.2cce8147.chunk.css",
+    "main.js": "/dont-click-twice/static/js/main.7f798240.chunk.js",
+    "main.js.map": "/dont-click-twice/static/js/main.7f798240.chunk.js.map",
+    "runtime~main.js": "/dont-click-twice/static/js/runtime~main.b513dcf3.js",
+    "runtime~main.js.map": "/dont-click-twice/static/js/runtime~main.b513dcf3.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/dont-click-twice/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.3ec7d0b8.chunk.js": "/dont-click-twice/static/js/2.3ec7d0b8.chunk.js",
+    "static/js/2.3ec7d0b8.chunk.js.map": "/dont-click-twice/static/js/2.3ec7d0b8.chunk.js.map",
+    "index.html": "/dont-click-twice/index.html",
+    "precache-manifest.97e7f3bcde55f04a9bbd106c4cf60a7c.js": "/dont-click-twice/precache-manifest.97e7f3bcde55f04a9bbd106c4cf60a7c.js",
+    "service-worker.js": "/dont-click-twice/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/dont-click-twice/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.2cce8147.chunk.css.map": "/dont-click-twice/static/css/main.2cce8147.chunk.css.map"
+  }
+}
