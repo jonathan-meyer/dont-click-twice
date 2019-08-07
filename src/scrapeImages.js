@@ -47,10 +47,8 @@ const manually = data =>
 
 manually(data)
   .then(result => {
-    console.log({ result });
-    fs.writeFileSync(
-      path.resolve(__dirname, "..", "public", "images.json"),
-      JSON.stringify(result, null, 2)
-    );
+    const file = path.resolve(__dirname, "images.json");
+    fs.writeFileSync(file, JSON.stringify(result, null, 2));
+    console.log(`[Created => ${file}]`);
   })
   .catch(err => console.log(err));
