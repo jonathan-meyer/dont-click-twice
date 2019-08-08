@@ -24,3 +24,8 @@ yarn-error.log*
 
 # lock files
 yarn.lock
+
+# scraped files
+public/images/*-logo*
+public/images/*-image-*
+src/images.json

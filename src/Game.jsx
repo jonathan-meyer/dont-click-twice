@@ -1,24 +1,40 @@
 import React from "react";
 
-class Game extends React.Component {
-  constructor(props) {
-    super(props);
+import Card from "react-bootstrap/Card";
+// import Row from "react-bootstrap/Row";
+// import Col from "react-bootstrap/Col";
+// import ListGroup from "react-bootstrap/ListGroup";
+import Image from "react-bootstrap/Image";
 
-    this.state = {};
-  }
+class Game extends React.Component {
+  state = { selected: [] };
 
   render() {
-    const { title, logo, images } = this.props;
+    const { title, images } = this.props;
+
+    console.log({ props: this.props });
 
     return (
-      <div className="game">
-        <h1>{title}</h1>
-        <p>{logo}</p>
-        <ul>
-          {images && images.map((image, key) => <li key={key}>{image}</li>)}
-        </ul>
-        <pre>{JSON.stringify(images, null, 2)}</pre>
-      </div>
+      <>
+        <Card>
+          <Card.Header className="text-dark">
+            <h1>{title}</h1>
+          </Card.Header>
+          <Card.Body className="d-flex justify-content-center flex-wrap align-items-center">
+            {images &&
+              images.map((image, key) => (
+                <Image
+                  key={key}
+                  src={image}
+                  thumbnail
+                  width={240}
+                  height={320}
+                  className="m-3"
+                />
+              ))}
+          </Card.Body>
+        </Card>
+      </>
     );
   }
 }
