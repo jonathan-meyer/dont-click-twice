@@ -16,7 +16,7 @@ const getImage = (url, name) =>
 
     fs.writeFileSync(file, res.body);
 
-    return path.relative(folder, file);
+    return path.resolve(path.sep, path.relative(folder, file));
   });
 
 const manually = data =>
