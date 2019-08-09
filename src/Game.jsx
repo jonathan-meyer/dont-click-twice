@@ -42,7 +42,7 @@ export default function({ title, images, onImageSelect, score, highScore }) {
       </Card.Header>
       <Card.Body className="d-flex justify-content-center flex-wrap align-items-center">
         {rows.map((row, key) => (
-          <Row key={`row-${key}`} className="mb-2 h-25">
+          <Row key={`row-${key}`} className="mb-2">
             {row.map((image, key) => (
               <Col key={`col-${key}`}>
                 <Button
