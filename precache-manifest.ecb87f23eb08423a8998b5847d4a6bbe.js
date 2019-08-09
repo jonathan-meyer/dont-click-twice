@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4b8464c424d31a91f43f17cfc2d97501",
+    "revision": "b118d93902a1aea2385e18d7cb1891e8",
     "url": "/dont-click-twice/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dont-click-twice/static/css/2.22a7d4ef.chunk.css"
   },
   {
-    "revision": "2fca783dbcb4b5a53e75",
+    "revision": "f48d6b4e2429aa0ca0a0",
     "url": "/dont-click-twice/static/css/main.2cce8147.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dont-click-twice/static/js/2.c2ae7098.chunk.js"
   },
   {
-    "revision": "2fca783dbcb4b5a53e75",
-    "url": "/dont-click-twice/static/js/main.9f77ebaf.chunk.js"
+    "revision": "f48d6b4e2429aa0ca0a0",
+    "url": "/dont-click-twice/static/js/main.4fabb59e.chunk.js"
   },
   {
     "revision": "0e166a852a7764d3efa5",
