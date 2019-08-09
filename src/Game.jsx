@@ -6,7 +6,6 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
-import Container from "react-bootstrap/Container";
 
 export default function({ title, images, onImageSelect, score, highScore }) {
   const rows = [];

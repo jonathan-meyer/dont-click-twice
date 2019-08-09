@@ -7,7 +7,7 @@ import Image from "react-bootstrap/Image";
 export default function({ games, onGameSelect }) {
   return (
     <div className="d-flex flex-column justify-content-center vh-100 align-items-center">
-      <p>Pick a Game</p>
+      <h1>Pick a Game</h1>
       <ButtonGroup>
         {games &&
           games.map(({ key, title, logo }) => (
