@@ -40,6 +40,15 @@ class App extends React.Component {
     highScore: 0
   };
 
+  componentDidMount() {
+    this.db = window.firebase.database();
+    this.highscore = this.db.ref("highscore");
+
+    this.highscore.on("value", snap => {
+      this.setState({ highScore: snap.val() || 0 });
+    });
+  }
+
   render() {
     const {
       game,
@@ -91,6 +100,7 @@ class App extends React.Component {
           max={images.length}
           show={gameOver}
           onClose={e => {
+            this.highscore.set(Math.max(highScore, selected.length));
             this.setState({
               gameOver: false,
               highScore: Math.max(highScore, selected.length),
