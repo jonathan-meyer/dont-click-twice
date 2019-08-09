@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://jonathan-meyer.github.io/dont-click-twice",
   "dependencies": {
+    "@stej/emoji": "^1.0.1",
     "bootstrap": "^4.3.1",
     "gh-pages": "2.0.1",
     "jquery": "^3.4.1",

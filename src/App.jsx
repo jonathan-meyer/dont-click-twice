@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 
 import Game from "./Game";
 import GameSelect from "./GameSelect";
+import GameOver from "./GameOver";
 
 import data from "./data.json";
 import images from "./images.json";
@@ -40,42 +41,64 @@ class App extends React.Component {
   };
 
   render() {
+    const {
+      game,
+      games,
+      gameOver,
+      title,
+      images,
+      selected,
+      highScore
+    } = this.state;
+
     return (
-      <Container>
-        {this.state.game ? (
-          <Game
-            title={this.state.title}
-            images={randomize(this.state.images)}
-            onImageSelect={image => {
-              if (this.state.selected.includes(image)) {
+      <>
+        <Container>
+          {game ? (
+            <Game
+              title={title}
+              images={randomize(images)}
+              onImageSelect={image => {
+                if (selected.includes(image)) {
+                  this.setState({
+                    gameOver: true
+                  });
+                } else {
+                  this.setState({
+                    selected: [...selected, image],
+                    gameOver: selected.length === images.length - 1
+                  });
+                }
+              }}
+              score={selected.length}
+              highScore={highScore}
+            />
+          ) : (
+            <GameSelect
+              games={games}
+              onGameSelect={game => {
                 this.setState({
-                  gameOver: true,
-                  highScore: Math.max(
-                    this.state.highScore,
-                    this.state.selected.length
-                  ),
-                  selected: []
+                  game: game.key,
+                  title: game.title,
+                  images: data[game.key].images
                 });
-              } else {
-                this.setState({ selected: [...this.state.selected, image] });
-              }
-            }}
-            score={this.state.selected.length}
-            highScore={this.state.highScore}
-          />
-        ) : (
-          <GameSelect
-            games={this.state.games}
-            onGameSelect={game => {
-              this.setState({
-                game: game.key,
-                title: game.title,
-                images: data[game.key].images
-              });
-            }}
-          />
-        )}
-      </Container>
+              }}
+            />
+          )}
+        </Container>
+        <GameOver
+          score={selected.length}
+          max={images.length}
+          show={gameOver}
+          onClose={e => {
+            this.setState({
+              gameOver: false,
+              highScore: Math.max(highScore, selected.length),
+              selected: []
+            });
+          }}
+        />
+      </>
     );
   }
 }
