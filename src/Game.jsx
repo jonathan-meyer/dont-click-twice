@@ -22,12 +22,24 @@ export default function({ title, images, onImageSelect, score, highScore }) {
     <Card className="vh-100">
       <Card.Header className="text-dark">
         <h1>{title}</h1>
-        <Container className="d-flex justify-content-around">
-          {score >= 0 && <Badge variant="info">Score: {score}</Badge>}
-          {highScore >= 0 && (
-            <Badge variant="info">High Score: {highScore}</Badge>
-          )}
-        </Container>
+        <div className="d-flex justify-content-around">
+          <h3>
+            <Badge variant="info">
+              Score{" "}
+              <Badge pill variant="light">
+                {score}
+              </Badge>
+            </Badge>
+          </h3>
+          <h3>
+            <Badge variant="info">
+              High Score{" "}
+              <Badge pill variant="light">
+                {highScore}
+              </Badge>
+            </Badge>
+          </h3>
+        </div>
       </Card.Header>
       <Card.Body className="d-flex justify-content-center flex-wrap align-items-center">
         {rows.map((row, key) => (
